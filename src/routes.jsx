@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home/home';
 import Posts from './components/pages/Posts/posts';
 import Albums from './components/pages/Albums/albums';
+import Todos from './components/pages/Todos/todos';
 import NotFound from './components/pages/NotFound/notFound';
 
 const Routes = () => {
@@ -12,6 +13,7 @@ const Routes = () => {
       <Route path='/' exact component={Home} />
       <Route path='/posts' component={Posts} />
       <Route path='/albums' component={Albums} />
+      <Route path='/todos' component={Todos} />
       <Route path='*' component={NotFound} />
     </Switch>
   )
