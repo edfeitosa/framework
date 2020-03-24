@@ -6,9 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import styles from './styles';
 const useStyles = makeStyles(styles);
 
-const List = ({ rows }) => {
+const List = ({ small, rows }) => {
   const classes = useStyles();
 
+  const height = () => small ? '70px' : '140px';
+  console.log(height());
   return (
     <>
       <h2>Usuário {rows[0].userId}</h2>
@@ -16,7 +18,7 @@ const List = ({ rows }) => {
         {
           rows && rows.map((row, key) => (
             <Grid key={key} item xs={12} md={6} style={{padding:'5px'}}>
-              <div className={classes.block}>
+              <div className={classes.block} style={{height:height()}}>
                 <div className={classes.orderUser}>
                   Usuário: {row.userId} | Post nº: {row.id}
                 </div>
@@ -40,7 +42,12 @@ const List = ({ rows }) => {
 }
 
 List.propTypes = {
+  small: PropTypes.bool,
   rows: PropTypes.array
+}
+
+List.defaultProps = {
+  small: true
 }
 
 export default List;

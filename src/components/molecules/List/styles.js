@@ -4,8 +4,7 @@ const styles = {
   block: {
     padding: '20px',
     backgroundColor: '#f3f3f3',
-    borderRadius: '4px',
-    height: '140px'
+    borderRadius: '4px'
   },
   orderUser: {
     fontSize: '0.85rem',

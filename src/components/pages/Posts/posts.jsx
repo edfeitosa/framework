@@ -21,7 +21,7 @@ const Posts = () => {
       <h1>Posts</h1>
       {
         posts && posts.map((itens, key) => (
-          <List key={key} rows={itens} />
+          <List key={key} small={false} rows={itens} />
         ))
       }
     </>
