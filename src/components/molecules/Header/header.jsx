@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <h1>Informações sobre usuários</h1>
+        <h2 style={{color:'#fff'}}>Informações sobre usuários</h2>
       </Toolbar>
     </AppBar>
   );

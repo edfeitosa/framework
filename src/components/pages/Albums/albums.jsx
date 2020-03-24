@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 import appService from '../../../services/appService';
 import List from '../../molecules/List/list';
 
-const Posts = () => {
+const Albums = () => {
 
-  const [posts, setPosts] = useState();
+  const [albums, setAlbums] = useState();
 
   async function loadData() {
-    const response = await appService.getClients('posts');
-    setPosts(response);
+    const response = await appService.getClients('albums');
+    setAlbums(response);
   }
 
   useEffect(() => {
@@ -18,9 +18,9 @@ const Posts = () => {
 
   return (
     <>
-      <h1>Posts</h1>
+      <h1>Albums</h1>
       {
-        posts && posts.map((itens, key) => (
+        albums && albums.map((itens, key) => (
           <List key={key} rows={itens} />
         ))
       }
@@ -28,4 +28,4 @@ const Posts = () => {
   );
 }
 
-export default Posts;
+export default Albums;
